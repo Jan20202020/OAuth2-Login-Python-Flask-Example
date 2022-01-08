@@ -69,6 +69,8 @@ def profile():
 
 # Or run like this
 # FLASK_APP=discord_oauth_login_server.py flask run -h 0.0.0.0 -p 8000
-if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=8000)
+if __name__ == "__main__":
+    app.secret_key = 'ItIsASecret'
+    app.debug = True
+    app.run()
 
